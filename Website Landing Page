@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakfast Menu</title>
+    <style>
+        body {
+            background: linear-gradient(109.6deg, rgb(255, 207, 84) 11.2%, rgb(255, 158, 27) 91.1%);
+        }
+        h1, h2 {
+            text-align: center;
+            font-family: Helvetica, Arial, Sans-serif;
+        }
+        h1 {
+            color: maroon;
+            font-size: 30px;
+            line-height: 40px;
+            margin: 20px auto;
+            text-decoration: underline;
+        }
+        h2 {
+            color: #000;
+            font-size: 20px;
+            margin: 0 auto;
+            font-weight: 400;
+            font-style: italic;
+        }
+        p {
+            text-align: center;
+            font-size: 20px;
+            line-height: 40px;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        a {
+            text-decoration: none;
+            color: maroon;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            border: 1px solid;
+            border-radius: 30px;
+            box-shadow: grey;
+            margin: 20px auto;
+            display: block;
+            color: yellow;
+            font-size: 22px;
+            background: transparent;
+            padding: 15px 20px;
+            transition: all 200ms ease;
+        }
+        button:hover {
+            color: #000;
+            background: orange;
+        }
+        strong {
+            text-decoration: underline;
+        }
+        .learn_more {
+            color: maroon;
+        }
+        .contact {
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .socials {
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <h1>Reeyah's Breakfast Inn</h1>
+    <h2>Food at its best</h2>
+    <p>
+        <strong>Benefits of taking a well prepared breakfast</strong>
+        <em>Breakfast is the first meal of the day and the most important one.</em>
+    </p>
+    <br />
+    <a href="https://www.betterhealth.vic.gov.au/health/healthyliving/breakfast#:~:text=Many%20studies%20have%20shown%20the,disease%20in%20the%20long%20term."
+        target="_blank" class="learn_more">
+        Read more on better health.
+    </a>
+    <hr />
+    <p>Fried Plantains with garnished fried eggs.</p>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/076/original/download_%282%29.jpeg?1694067612"
+        alt="Breakfast" />
+    <!-- Contact Section -->
+    <div class="contact">
+        <span class="mail">Email: </span>
+        <a href="mailto:Reeyah'sbreakfastinn@gmail.com">Reeyah'sbreakfastinn@gmail.com</a>
+    </div>
+    <div class="socials">
+        <span>Facebook:</span>
+        <a href="https://facebook.com/Reeyah_foods" target="_blank">Reeyah_foods</a>
+    </div>
+    <!-- Order Now Button -->
+    <button onclick="OrderNow()">Order Now</button>
+
+    <!-- Email functionality -->
+    <script>
+        function OrderNow() {
+            let name = prompt("What's your Name?");
+            let email = prompt("What's your Email?");
+            if (name === null || email === null) {
+                alert("Can't Order");
+            } else {
+                // Opens the default email client for contacting
+                window.location.href = "mailto:Reeyah'sbreakfastinn@gmail.com?subject=Order Request&body=Hello%20Reeyah,%20My%20name%20is%20" + name + "%20and%20my%20email%20is%20" + email + "%2E%20I%20would%20like%20to%20order%20food.";
+            }
+        }
+    </script>
+</body>
+</html>
